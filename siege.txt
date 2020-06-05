@@ -1,0 +1,7 @@
+
+
+siege -c1 -t12S 'http://localhost:3030/maria200206 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost:3030/maria200206?$table=rpt06047&$limit=10&$skip=0'
+
+siege -c2 -t30S 'http://localhost:3030/maria200221 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost:3030/maria200221?$table=rpt06047&$limit=10&$skip=0'
