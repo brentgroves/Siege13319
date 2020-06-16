@@ -1,7 +1,17 @@
 
+Test maria200206
+siege -c3 -t10S 'http://localhost/maria200206 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost/maria200206?$table=rpt06169&$limit=10&$skip=0'
+Test sproc200206
+siege -c3 -t10S 'http://localhost/sproc200206 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost/sproc200206?$table=rpt0616100&$limit=10&$skip=0'
 
-siege -c1 -t12S 'http://localhost:3030/maria200206 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
-siege -c3 -t10S 'http://localhost:3030/maria200206?$table=rpt06047&$limit=10&$skip=0'
 
-siege -c2 -t30S 'http://localhost:3030/maria200221 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
-siege -c3 -t10S 'http://localhost:3030/maria200221?$table=rpt06047&$limit=10&$skip=0'
+Test maria200221
+siege -c3 -t10S 'http://localhost/maria200221 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost/maria200221?$table=rpt061615&$limit=10&$skip=0'
+
+
+Test sproc200221
+siege -c3 -t10S 'http://localhost/sproc200221 POST {"startDate":"2020-03-01 00:00:00","endDate": "2020-03-14 23:59:59"}' --content-type 'application/json'
+siege -c3 -t10S 'http://localhost/sproc200221?$table=rpt0616300&$limit=10&$skip=0'
